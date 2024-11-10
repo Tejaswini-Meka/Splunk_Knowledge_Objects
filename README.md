@@ -11,6 +11,13 @@ Example see the below data, which is having the common field
 
 ![raw_data](https://github.com/Tejaswini-Meka/Field-Aliases-Calculated-Fields-/blob/main/calculated%20fields.png)
 
+The above query is having the calculated fields.
+Same results i want it in each and every results with out writing the qurey everytime.
+In this scenario, calculated fields comes to the picture.
+
+![raw_data](https://github.com/Tejaswini-Meka/Field-Aliases-Calculated-Fields-/blob/main/calculated%20fields%20conf.png)
+
+
 
 
 
