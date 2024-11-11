@@ -9,13 +9,24 @@ Example see the below data, which is having the common field
 
 ### Calculated-Fields
 
-![raw_data](https://github.com/Tejaswini-Meka/Field-Aliases-Calculated-Fields-/blob/main/calculated%20fields.png)
+![data1](https://github.com/user-attachments/assets/b8dcdba8-7ae9-46fe-a05a-cb44d4c46a46)
 
 The above query is having the calculated fields.
-Same results i want it in each and every results with out writing the qurey everytime.
+Same results i want it in each and every results without writing the qurey everytime.
 In this scenario, calculated fields comes to the picture.
 
-![raw_data](https://github.com/Tejaswini-Meka/Field-Aliases-Calculated-Fields-/blob/main/calculated%20fields%20conf.png)
+In above query calculated fields are</br>
+```
+| eval discount_in_number = MRP - 'Selling Price'
+| eval discount_in_perc = round((discount_in_number/MRP)*100)
+```
+Now we have to mentioned them in **props.conf** file of the respective application and sourcetype.
+Below is the configuration we have to do it in props.conf
+```
+EVAL-discount_in_number = MRP - 'Selling Price'
+EVAL-discount_in_perc = round((MRP - 'Selling Price')*100)
+```
+![Data2](https://github.com/user-attachments/assets/b612c520-0d0f-4202-8421-b6a7f744dd3e)
 
 
 
