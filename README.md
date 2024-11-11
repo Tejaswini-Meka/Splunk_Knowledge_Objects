@@ -20,6 +20,9 @@ In above query calculated fields are</br>
 | eval discount_in_number = MRP - 'Selling Price'
 | eval discount_in_perc = round((discount_in_number/MRP)*100)
 ```
+If you see the above query, field **discount_in_perc** rely on **discount_in_number**
+it can give the results in search time but same cannot be applicable in props.conf - calculated field cannot reliably depend on another is due to Splunk’s independent and non-sequential calculation of fields in props.conf. Each calculated field should rely on raw data, not on the results of other calculated fields
+
 Now we have to mentioned them in **props.conf** file of the respective application and sourcetype.
 Below is the configuration we have to do it in props.conf
 ```
