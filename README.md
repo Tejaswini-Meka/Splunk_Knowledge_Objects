@@ -5,7 +5,19 @@ A field alias is an alternate name that can be assigned to a field. Field aliase
 
 Example see the below data, which is having the common field 
 
-![raw_data](https://github.com/Tejaswini-Meka/Field-Aliases-Calculated-Fields-/blob/main/Raw%20data.png)
+![data4](https://github.com/user-attachments/assets/d43aa80e-8d6e-469d-8b53-3f64e7980c9b)
+
+Now i want to see the results of all types of usernames field values under single filed (user)</br>
+In this case *rename* command wont work</br>
+Because, we cannot rename the multiple fields with the same name.
+
+Now we have to use the below configurations in **props.conf** wrt to application and sourcetype
+![data5](https://github.com/user-attachments/assets/3faf3d58-1445-48b6-bb1c-6b1ec170a76f)
+
+![image (2)](https://github.com/user-attachments/assets/6cda1924-6957-45b4-be33-d4f33f8f41d5)
+
+After this we can see the field **user** under this we can get the values of all types of usernames.
+
 
 ### Calculated-Fields
 
