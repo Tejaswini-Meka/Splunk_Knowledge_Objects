@@ -28,6 +28,10 @@ EVAL-discount_in_perc = round((MRP - 'Selling Price')*100)
 ```
 ![Data2](https://github.com/user-attachments/assets/b612c520-0d0f-4202-8421-b6a7f744dd3e)
 
+Now without mentioning the *eval* command in the query directly we can get the results of our calculated fields **"discount_in_number"** & **"discount_in_perc"**
+
+![data3](https://github.com/user-attachments/assets/8cc40498-dd74-462f-9912-b9f73ebaee82)
+
 
 
 
