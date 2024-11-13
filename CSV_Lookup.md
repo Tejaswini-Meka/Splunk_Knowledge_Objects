@@ -42,6 +42,48 @@ refresh
 https://<IP Address of Splunk instance>:<PortNumber>/en-US/debug/refresh
 ```
 
+##### If the server is existed in cloud follow below commands.
+
+ before connecting to the instance use ```scp``` command
+ ```
+scp -i "Sydney_Key.pem" ip_lookup.csv ec2-user@ec2-54-66-231-19.ap-southeast-2.compute.amazonaws.com:/tmp
+```
+Connect to the instance
+```
+ssh -i "Sydney_Key.pem" ec2-user@ec2-54-66-231-19.ap-southeast-2.compute.amazonaws.com
+```
+Change the permissions of the file
+```
+chmod 765 <ip_lookup_csv>
+```
+check the permissions of the file
+```
+ll
+```
+Login as splunk user
+```
+sudo su - splunk
+```
+go to tmp folder as our file is located in tmp folder
+```
+cd /tmp
+```
+copy file from tmp folder to lookups folder
+```
+cp ip_lookup.csv /opt/splunk/etc/apps/search/lookups
+```
+change directory from tmp folder to lookup folder
+```
+cd /opt/splunk/etc/apps/search/lookups
+```
+list out the files existed in lookups folder
+
+```
+ls
+```
+
+
+
 
 
 
