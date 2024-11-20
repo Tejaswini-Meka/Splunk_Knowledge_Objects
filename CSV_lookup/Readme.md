@@ -14,7 +14,8 @@ scp /path/to/local_file.csv user@<splunk_server_ip>:/path/to/splunk/etc/apps/<ap
 ```
 scp "C:\Users\tmeka\Downloads\Lookups\ip_lookup.csv" root@X.X.X.X:/home/
 After this type yes the connection in the terminal and give root user password.
-Once logged in as a root user use below command to change the permissions of the file.
+Once logged in as a root user movew to the file located directory ``` cd /home ``` 
+use below command to change the permissions of the file.
 
 ```
 chmod 765 <lookup_file.csv>
@@ -32,8 +33,26 @@ cd /opt/splunk/etc/apps/search/lookups
 ```
 ls
 ```
-Once you see the file in the lookup directory we can restart /debug refresh the splunk
-to restart the splunk
+Now you see the file in the lookup directory.
+
+When you uploaded a file into the lookup directory in Splunk, it needs to be properly configured in order for Splunk to recognize and use it as a lookup table. This is where the transforms.conf file comes in.
+
+Create **tranforms.conf** file in the local directory of the respective application if it is not present.
+
+```
+touch transforms.conf
+```
+Edit the file
+```
+vi transforms.conf
+```
+Keep below stanza in **transforms.conf**
+
+```
+[lookup_name]
+filename = lookup_name.csv
+```
+we can restart /debug refresh the splunk
 ```
  /opt/splunk/bin/splunk restart
 ````
