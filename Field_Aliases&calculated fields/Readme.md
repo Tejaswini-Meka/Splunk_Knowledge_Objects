@@ -3,6 +3,8 @@
 ### Field-Aliases
 A field alias is an alternate name that can be assigned to a field. Field aliases can be used to normalize data from multiple sources, and to assign different extracted field names to a single field name.
 
+use: field name normalization across the data.
+
 Example see the below data, which is having the common field 
 
 ![data4](https://github.com/user-attachments/assets/d43aa80e-8d6e-469d-8b53-3f64e7980c9b)
