@@ -4,4 +4,6 @@ Macros are reusable search snippets or functions that allow you to simplify and 
 
 Example:1
 
+<img width="936" alt="image" src="https://github.com/user-attachments/assets/99e0eb30-33fb-4b31-afe9-03bca2f27bad" />
+
 
