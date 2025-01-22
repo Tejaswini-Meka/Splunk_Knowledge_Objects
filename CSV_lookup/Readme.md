@@ -101,5 +101,10 @@ list out the files existed in lookups folder
 ls
 ```
 
+### Creating CSV Lookup through GUI
+
+- First we have to create the Lookup table and followed by lookup defination.
+- It is necessary to create lookup defination if created lookup table is getting used with the events in splunk
+- If lookup defination was not created
 
 
